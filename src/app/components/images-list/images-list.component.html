@@ -1,0 +1,14 @@
+<app-category-buttons></app-category-buttons>
+<div id="imagesCardArea">
+    <div class="images-container">
+        <h3>My Shuffling Images</h3>
+        <div class="js-grid my-shuffle">
+            <figure class="js-item column" [attr.data-groups]=getCategory(image.category) (click)='gotoImageDetails(image.id)' *ngFor="let image of imagesArr">
+                <div class="aspect aspect--16x9">
+                    <div class="aspect__inner"><img [src]=image.url obj.alt="obj.alt" /></div>
+                </div>
+            </figure>
+            <div class="column my-sizer-element"></div>
+        </div>
+    </div>
+</div>
